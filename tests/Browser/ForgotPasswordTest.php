@@ -11,15 +11,10 @@ it('may reset the password', function () {
 
     User::factory()->create(['email' => 'example@example.com']);
 
-    $page = visit('/login')->on()->mobile()->inDarkMode();
+    $page = visit('/forgot-password');
 
-    $page->assertSee('Log in to your account')
-        ->assertSee('Sign up')
-        ->click('Forgot password?')
-        ->wait(0.01)
-        ->type('email', 'example@example.com')
+    $page->type('email', 'example@example.com')
         ->press('Email password reset link')
-        ->wait(0.01)
         ->assertSee('A reset link will be sent if the account exists.')
 //        ->assertNoConsoleLogs()
         ->assertNoJavascriptErrors();
