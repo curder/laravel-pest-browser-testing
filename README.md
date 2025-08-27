@@ -1,3 +1,6 @@
+
+[![tests](https://github.com/curder/laravel-pest-browser-testing/actions/workflows/tests.yml/badge.svg?branch=main)](https://github.com/curder/laravel-pest-browser-testing/actions/workflows/tests.yml)
+
 ## Installation
 
 ```shell
